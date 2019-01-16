@@ -2,11 +2,16 @@ header {
 	border-bottom: 1px solid black;
 	color: orange;
 	padding: 10px;
-	text-align: right;
-}
-.heading {
-	width: 800 px;
+	text-align: center;
 }
 .catalogue_img {
 	padding: 10px;
+	display: flex;
+}
+
+.flower_image {
+	border: 1px solid black;
+}
+.navBar {
+	margin: auto 0px;
 }
