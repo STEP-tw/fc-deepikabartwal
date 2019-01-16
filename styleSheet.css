@@ -1,0 +1,12 @@
+header {
+	border-bottom: 1px solid black;
+	color: orange;
+	padding: 10px;
+	text-align: right;
+}
+.heading {
+	width: 800 px;
+}
+.catalogue_img {
+	padding: 10px;
+}
