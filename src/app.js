@@ -1,14 +1,16 @@
 const fs = require('fs');
 const app = (req, res) => {
-	let path = './index.html';
-	if (req.url == '/styleSheet.css') {
-		path = './styleSheet.css';
-	}
-	if (req.url == '/freshorigins.jpg') {
-		path = './freshorigins.jpg';
+	let path = '.' + req.url;
+	if (path == './') {
+		path = './index.html';
 	}
 	fs.readFile(path, (err, content) => {
-		res.write(content);
+		if (!err) {
+			res.statusCode = 200;
+			res.write(content);
+			res.end();
+		}
+		res.statusCode = 404;
 		res.end();
 	});
 };
