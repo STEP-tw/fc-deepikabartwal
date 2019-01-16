@@ -1,10 +1,9 @@
 const fs = require('fs');
 const app = (req, res) => {
-	let path = './html-pages' + req.url;
-	if (path == './html-pages/') {
-		path = './html-pages/index.html';
+	let path = './html-data' + req.url;
+	if (path == './html-data/') {
+		path = './html-data/index.html';
 	}
-	console.log(path);
 	fs.readFile(path, (err, content) => {
 		if (!err) {
 			res.statusCode = 200;
