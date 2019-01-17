@@ -9,6 +9,7 @@ const app = (req, res) => {
 			res.statusCode = 200;
 			res.write(content);
 			res.end();
+			return;
 		}
 		res.statusCode = 404;
 		res.end();
