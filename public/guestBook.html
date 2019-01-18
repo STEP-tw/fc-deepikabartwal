@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Guest Book</title>
+		<link rel="stylesheet" type="text/css" href="styleSheet.css" />
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1><a href="index.html"><<</a> Guest Book</h1>
+		</header>
+		<div>
+			<h2 class="comment_request">Leave a comment</h2>
+			<form method="POST" class="input_area">
+				<div>
+					<label style="width: 150px; display: inline-block;font-size: 30px">
+						Name:</label
+					>
+					<input type="text" style="width:200px;height:40px;font-size: 25px" />
+				</div>
+				<div>
+					<label style="width: 150px; display: inline-block; font-size: 30px">
+						Comment:
+					</label>
+					<textarea
+						name="comment"
+						id="comment"
+						cols="30"
+						rows="5"
+						style="font-size: 25px"
+					></textarea>
+				</div>
+				<div>
+					<input
+						style="background:rgb(204, 182, 182);font-size: 15px;"
+						type="submit"
+						value="Submit"
+					/>
+				</div>
+			</form>
+		</div>
+		<hr />
+		<div id="comment_display_box" class="comment_box">
+			<p>DATETIME_NAME_COMMENTS_LIST</p>
+		</div>
+	</body>
+</html>
