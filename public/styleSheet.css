@@ -54,3 +54,13 @@ header {
 	margin: auto 0px;
 	font-size: 120%;
 }
+
+.comment_list {
+	width: 800px;
+}
+
+.comment_list td {
+	font-size: 120%;
+	width: 100px;
+	border: 1px solid black;
+}
