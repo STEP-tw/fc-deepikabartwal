@@ -37,8 +37,22 @@ const serveFile = function(req, res) {
 			send(res, 200, content);
 			return;
 		}
-		sendNotFound(res);
+		render404Page(req, res);
 		return;
+	});
+};
+
+const renderFile = function(req, res) {
+	const filePath = resolveRequestedFile(req.url);
+	fs.readFile(filePath, (error, data) => {
+		if (error) return render404Page(req, res);
+		send(res, 200, data);
+	});
+};
+
+const render404Page = function(req, res) {
+	fs.readFile('./public/notFound.html', (error, content) => {
+		send(res, 404, content);
 	});
 };
 

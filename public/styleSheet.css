@@ -64,3 +64,8 @@ header {
 	width: 100px;
 	border: 1px solid black;
 }
+
+.not_Found {
+	width: 960px;
+	margin: 0 auto;
+}
