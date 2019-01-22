@@ -3,6 +3,7 @@ const isMatching = (req, route) => {
 	if (route.url && req.url != route.url) return false;
 	return true;
 };
+
 class RequestHandler {
 	constructor() {
 		this.routes = [];
