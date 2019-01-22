@@ -19,17 +19,26 @@ const getPath = function(url) {
 	return path;
 };
 
+const send = function(res, statusCode, content) {
+	res.statusCode = statusCode;
+	res.write(content);
+	res.end();
+	return;
+};
+
+const sendNotFound = function(res) {
+	return send(res, 404, 'Page Not Found');
+};
+
 const serveFile = function(req, res) {
 	let path = getPath(req.url);
 	fs.readFile(path, (err, content) => {
 		if (!err) {
-			res.statusCode = 200;
-			res.write(content);
-			res.end();
+			send(res, 200, content);
 			return;
 		}
-		res.statusCode = 404;
-		res.end();
+		sendNotFound(res);
+		return;
 	});
 };
 
