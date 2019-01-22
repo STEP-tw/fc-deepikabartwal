@@ -1,2 +1,5 @@
 * TODO work on page.
-* TODO get bottom border line.
+* DONE get bottom border line.
+* TODO take comments from input line.
+* TODO make new handler
+* TODO refactor code as it is in pretty terrible condition.
